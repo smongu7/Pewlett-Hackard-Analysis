@@ -35,4 +35,57 @@ CREATE TABLE salaries (
   PRIMARY KEY (emp_no)
 );
 
-SELECT * FROM departments;
+CREATE TABLE dept_emp (
+  emp_no INT NOT NULL,
+  dept_no VARCHAR(4) NOT NULL,
+  from_date DATE NOT NULL,
+  to_date DATE NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+  FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
+  PRIMARY KEY (emp_no)
+);
+
+-- DROP TABLE TO RECREATE IT WITH UNIQUE PRIMARY KEY
+drop table dept_emp
+CREATE TABLE dept_emp (
+  emp_no INT NOT NULL,
+  dept_no VARCHAR(4) NOT NULL,
+  from_date DATE NOT NULL,
+  to_date DATE NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+  FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
+  PRIMARY KEY (emp_no, dept_no)
+);
+
+
+CREATE TABLE titles (
+  emp_no INT NOT NULL,
+  titles VARCHAR(40) NOT NULL,
+  from_date DATE NOT NULL,
+  to_date DATE NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+  PRIMARY KEY (emp_no)
+);
+
+-- DROP TABLE TO RECREATE IT WITH UNIQUE PRIMARY KEY
+drop table titles
+CREATE TABLE titles (
+  emp_no INT NOT NULL,
+  titles VARCHAR(40) NOT NULL,
+  from_date DATE NOT NULL,
+  to_date DATE NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+  PRIMARY KEY (emp_no, titles)
+);
+
+-- DROP TABLE TO RECREATE IT WITH UNIQUE PRIMARY KEY, b/c for some 
+-- reason it didn't work with last one
+drop table titles
+CREATE TABLE titles (
+  emp_no INT NOT NULL,
+  titles VARCHAR(40) NOT NULL,
+  from_date DATE NOT NULL,
+  to_date DATE NOT NULL,
+  FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+  PRIMARY KEY (emp_no, titles, from_date)
+);
