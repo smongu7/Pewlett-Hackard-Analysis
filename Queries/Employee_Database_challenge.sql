@@ -25,7 +25,7 @@ SELECT * FROM unique_titles
 
 -- PART 3: CREATE RETIRING_TITLES TABLE
 SELECT COUNT(ut.emp_no), ut.titles
---INTO retiring_titles
+INTO retiring_titles
 FROM unique_titles as ut
 GROUP BY ut.titles
 ORDER BY COUNT (ut.emp_no) DESC;
