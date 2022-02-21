@@ -18,7 +18,7 @@ To help Bobby find the answer to these questions, we learned how to perform the 
 - Roughly 94% of everyone who is eligibile to retire is either an engineer or a staff.
 - Roughly 49% of everyone who is eligible to retire is an engineer.
 - Roughly 45% of everyone who is eligible to retire is a staff.
-- Roughly 4.7% of people are eligible to be a mentor in the mentorship program.
+- Roughly 4.7% (1,549 people) of people are eligible to be a mentor in the mentorship program.
 ## Summary
 According to the results, the most people who will be retiring are engineers and staff. About 33,118 positions total will need to be filled. There are two additional tables that would be helpful in determining who is retiring and who is eligible to be in the mentorshi program. They are the following:
 - the number of people eligibile to retire by department
